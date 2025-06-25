@@ -1,10 +1,13 @@
+import { Routes, Route, Link } from 'react-router';
+import Header from './components/layout/Header';
 import './styles/App.scss';
 
 function App() {
   return (
-    <div>
-      Escribe aquí tu HTML...
-    </div>
+<div className="page">
+  <Header />
+
+</div>
   )
 }
 
