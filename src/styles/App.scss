@@ -1,2 +1,123 @@
-@use 'core/reset';
+// Colores base
+$pastel-purple: #e9d6f7;
+$card-bg: #f7f3fa;
+$card-border: #b39ddb;
+$deep-purple: #4b286d;
+
+body,
+.page {
+  background-color: $pastel-purple;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+}
+
+// Header (puedes añadir el logo en el componente Header)
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0 1rem 0;
+  background: transparent;
+
+  .logo {
+    width: 120px;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
+  h1 {
+    color: $deep-purple;
+    font-size: 2.2rem;
+    margin: 0;
+  }
+}
+
+// Formulario de búsqueda
+.form__search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin: 2rem 0;
+
+  label {
+    color: $deep-purple;
+    font-weight: 500;
+    margin-bottom: 0.2rem;
+  }
+
+  .input__search,
+  select {
+    padding: 0.7rem 1rem;
+    border: 2px solid $card-border;
+    border-radius: 8px;
+    font-size: 1rem;
+    width: 260px;
+    background: #fff;
+    outline: none;
+    transition: border 0.2s;
+    margin-bottom: 0.5rem;
+    &:focus {
+      border-color: $deep-purple;
+    }
+  }
+}
+
+// Lista de personajes
+.character__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+// Tarjeta de personaje
+.character__card {
+  background: $card-bg;
+  border: 2px solid $card-border;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(75, 40, 109, 0.08);
+  padding: 1.5rem 1rem;
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.15s, border-color 0.15s;
+  &:hover {
+    transform: translateY(-4px) scale(1.03);
+    border-color: $deep-purple;
+  }
+}
+
+.character__image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 2px solid $deep-purple;
+  background: #fff;
+}
+
+.character__name {
+  font-weight: bold;
+  color: $deep-purple;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.character__species {
+  color: #6d4b86;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.character__label {
+  color: $deep-purple;
+  font-weight: 500;
+}
 

@@ -1,7 +1,6 @@
 function CharacterDetail() {
     return (
         <>
-        <p>CharacterDetail</p>
         </>
     )
 }

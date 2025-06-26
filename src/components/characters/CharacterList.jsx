@@ -1,8 +1,17 @@
-function CharacterList() {
+import CharacterCard from "./CharacterCard";
+
+function CharacterList({ pcharactersList }) {
     return (
-        <>
-        <p>Character List</p>
-        </>
+        <main>
+            <ul className="character__list">
+                {
+                    pcharactersList.map((character, index) => <CharacterCard key={index} pcharacter={character} />
+
+                    )
+                }
+
+            </ul>
+        </main>
     )
 }
 
