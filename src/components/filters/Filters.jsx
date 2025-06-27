@@ -20,7 +20,7 @@ const handleHouse = (ev) => {
                 autoComplete="off"
                 type="search"
                 name="search"
-                placeholder="Indica su nombre o apellido"
+                placeholder="Escribe su nombre o apellido"
                 value={psearchName}
                 onChange={handleName}
             />

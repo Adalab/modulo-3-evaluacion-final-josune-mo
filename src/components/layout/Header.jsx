@@ -1,9 +1,14 @@
+import logo from '../../images/harry-potter-logo.png.webp';
+
 function Header() {
 
     return (
         <header className="header">
-            <h1 className="header__title">Listado de personajes Harry Potter</h1>
-
+            <img
+                className="logo"
+                src={logo}
+                alt="Harry Potter Logo"
+            />
         </header>
     );
 }
