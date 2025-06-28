@@ -1,4 +1,4 @@
-// Colores base
+// Colors
 $pastel-purple: #e9d6f7;
 $card-bg: #f7f3fa;
 $card-border: #b39ddb;
@@ -9,10 +9,10 @@ body,
   background-color: $pastel-purple;
   min-height: 100vh;
   margin: 0;
-  font-family: 'Segoe UI', 'Arial', sans-serif;
+  font-family: "Segoe UI", "Arial", sans-serif;
 }
 
-// Header (puedes añadir el logo en el componente Header)
+// Header
 .header {
   display: flex;
   flex-direction: column;
@@ -33,7 +33,7 @@ body,
   }
 }
 
-// Formulario de búsqueda
+// Form
 .form__search {
   display: flex;
   flex-direction: column;
@@ -64,7 +64,7 @@ body,
   }
 }
 
-// Lista de personajes
+// Character's List
 .character__list {
   display: flex;
   flex-wrap: wrap;
@@ -73,9 +73,21 @@ body,
   list-style: none;
   padding: 0;
   margin-bottom: 2rem;
+    a {
+    text-decoration: none;
+    color: inherit;
+  }
 }
 
-// Tarjeta de personaje
+// Character Card
+
+.character__detail-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+
 .character__card {
   background: $card-bg;
   border: 2px solid $card-border;
@@ -108,12 +120,14 @@ body,
   margin-bottom: 0.5rem;
   font-size: 1.1rem;
   text-align: center;
+  text-decoration: none;
 }
 
 .character__species {
   color: #6d4b86;
   font-size: 0.95rem;
   text-align: center;
+  text-decoration: none;
 }
 
 .character__label {
@@ -121,3 +135,14 @@ body,
   font-weight: 500;
 }
 
+.character__info {
+  color: #6d4b86;
+  font-size: 1rem;
+  background: #ede3f7;
+  border-radius: 8px;
+  padding: 0.4rem 0.8rem;
+  margin: 0.3rem 0;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}
