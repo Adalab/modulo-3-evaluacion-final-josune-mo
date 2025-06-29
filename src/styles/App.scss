@@ -66,14 +66,14 @@ body,
 
 // Character's List
 .character__list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  justify-items: center;
   list-style: none;
-  padding: 0;
+  padding: 2rem;
   margin-bottom: 2rem;
-    a {
+  a {
     text-decoration: none;
     color: inherit;
   }
@@ -145,4 +145,13 @@ body,
   width: 100%;
   text-align: center;
   box-sizing: border-box;
+}
+
+.character__notfound {
+  font-weight: bold;
+  color: $deep-purple;
+  margin: 3rem 0;
+  font-size: 1.1rem;
+  text-align: center;
+  text-decoration: none;
 }

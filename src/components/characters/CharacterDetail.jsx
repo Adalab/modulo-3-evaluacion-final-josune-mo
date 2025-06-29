@@ -4,8 +4,15 @@ import defaultImage from "/harry-potter.png";
 function CharacterDetail({ pcharactersList }) {
   const params = useParams();
   const id = params.id;
-
   const character = pcharactersList.find((character) => character.id === id);
+
+  if (!character) {
+    return (
+      <main>
+        <p className="character__notfound">El personaje que buscas no existe</p>
+      </main>
+    );
+  }
 
   const image = character.image === "" ? defaultImage : character.image;
 

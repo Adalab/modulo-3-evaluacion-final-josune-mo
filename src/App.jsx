@@ -15,7 +15,10 @@ function App() {
     fetch("https://hp-api.onrender.com/api/characters")
       .then((response) => response.json())
       .then((data) => {
-        const newData = data.map(character => ({...character, house: character.house === "" ? "Sin casa" : character.house}))
+        const newData = data.map((character) => ({
+          ...character,
+          house: character.house === "" ? "Sin casa" : character.house,
+        }));
         setCharactersList(newData);
       });
   }, []);
@@ -45,11 +48,17 @@ function App() {
                 pfilterHouse={filterHouse}
                 psetFilterHouse={setFilterHouse}
               />
-              <CharacterList pcharactersList={filteredList} />
+              <CharacterList
+                pcharactersList={filteredList}
+                psearchName={searchName}
+              />
             </>
           }
         />
-        <Route path="/detail/:id" element={<CharacterDetail pcharactersList={charactersList}/>} />
+        <Route
+          path="/detail/:id"
+          element={<CharacterDetail pcharactersList={charactersList} />}
+        />
       </Routes>
     </div>
   );

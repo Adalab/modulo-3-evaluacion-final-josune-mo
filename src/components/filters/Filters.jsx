@@ -15,8 +15,12 @@ function Filters({
     psetFilterHouse(ev.target.value);
   };
 
+  const handleSubmit = (ev) => {
+    ev.preventDefault();
+  };
+
   return (
-    <form className="form__search">
+    <form className="form__search" onSubmit={handleSubmit}>
       <label htmlFor="search">Buscar por personaje: </label>
       <input
         id="search"
