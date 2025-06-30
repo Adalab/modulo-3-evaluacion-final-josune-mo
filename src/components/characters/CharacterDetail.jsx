@@ -43,6 +43,13 @@ function CharacterDetail({ pcharactersList }) {
         <p className="character__info">
           <label className="character__label">Casa: </label> {character.house}
         </p>
+
+        <p className="character__info">
+          <label className="character__label">Nombres alternativos: </label>
+          {character.alternate_names && character.alternate_names.length > 0
+            ? character.alternate_names.join(", ")
+            : "No tiene"}
+        </p>
       </li>
     </div>
   );
